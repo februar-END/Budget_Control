@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      table{
+        border: solid 1px #000000;
+        border-collapse: collapse;
+      }
+      th {border: solid 1px #000000}
+      td {border: solid 1px #000000}
+    </style>
+  </head>
+  <body>
+    <h2>退職処理</h2>
+    <form method="post" action="https://script.google.com/macros/s/AKfycbwDIE9K92TJYeBz3DK8-esVK1VkYEOgh3xTXz3ax_nb47AEkHrojtNCo8ac-bXPujtX/exec">
+    
+   
+      <!--<label>name：<input type="text" name="name"></label><br>-->
+
+      <select name="name" id="">
+        <option value="">--社員を選択--</option>
+        <? 
+          for(var i=1; i<=msg.length-1; i++) { ?>
+          <option value=<?= msg[i][1] ?>> <?= msg[i][1] ?> </option>
+        <? } ?>
+      </select><br>
+
+
+
+      事由発生年月日：<input type="date" name="start"><br>
+ 
+      <input type="submit" value="送信する">
+    
+  </form>
+  <a href="https://script.google.com/macros/s/AKfycbyki4N8siVdmBdaXajR4qic3Zlr7ou87wenS0f3wkBf/dev">
+		<h2>戻る</h2>
+	</a>
+ 
+  </body>
+</html>
