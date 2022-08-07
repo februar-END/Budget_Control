@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      table{
+        border: solid 1px #000000;
+        border-collapse: collapse;
+      }
+      th {border: solid 1px #000000}
+      td {border: solid 1px #000000}
+    </style>
+  </head>
+  <body>
+    <h2>売上管理の変更</h2>
+    <form method="post" action="https://script.google.com/macros/s/AKfycbx90G3LZG7OKV8sLD85WmQAG285A2H6JrLCJPSK7zaMu446nkOvN3gkGr3bA2Pf4p1H/exec">
+    
+   
+      <!--<label>name：<input type="text" name="name"></label><br>-->
+
+      <select name="manager" id="">
+        <option value="">--営業担当者を選択--</option>
+        <? 
+          for(var i=1; i<=name.length-1; i++) { ?>
+          <option value=<?= name[i][1] ?>> <?= name[i][1] ?> </option>
+        <? } ?>
+      </select><br>
+
+      <select name="name" id="">
+        <option value="">--請求先を選択--</option>
+        <? 
+          for(var i=1; i<=matter.length-1; i++) { ?>
+          <option value=<?= matter[i][3] ?>> <?= matter[i][3] ?> </option>
+        <? } ?>
+      </select><br>
+
+
+      <select name="matter" id="">
+        <option value="">--案件を選択--</option>
+        <? 
+          for(var i=1; i<=matter.length-1; i++) { ?>
+          <option value=<?= matter[i][4] ?>> <?= matter[i][4] ?> </option>
+        <? } ?>
+      </select><br>
+
+
+      事由発生年月日：<input type="date" name="start"><br>
+      <select name="division" id="">
+        <option value="">--事業部を選択--</option>
+        <option value="エンジニアリング事業部">エンジニアリング事業部</option>
+        <option value="ITソリューション事業部">ITソリューション事業部</option>
+        <option value="クリエイティブ事業部">クリエイティブ事業部</option>
+        <option value="コーポレート事業部">コーポレート事業部</option>
+        <option value="経営">経営</option>
+      </select><br>
+      
+      <select name="commodity" id="">
+        <option value="">--商材を選択--</option>
+        <option value="経営">経営</option>
+        <option value="受託">受託</option>
+        <option value="SES">SES</option>
+        <option value="副業SES">副業SES</option>
+        <option value="助成金">助成金</option>
+        <option value="その他売上">その他売上</option>
+      </select><br>
+
+     
+      予算単価：<input type="number" name="budget"><br>
+      時給単価：<input type="number" name="hourlyWage"><br>
+      予算工数：<input type="number" name="productionCosts"><br>
+      実績：<input type="number" name="achievement"><br>
+      <input type="submit" value="送信する">
+    
+  </form>
+  <a href="https://script.google.com/macros/s/AKfycbyki4N8siVdmBdaXajR4qic3Zlr7ou87wenS0f3wkBf/dev">
+		<h2>戻る</h2>
+	</a>
+ 
+  </body>
+</html>
